@@ -23,4 +23,6 @@ Nuxeo-Component: OSGI-INF/core-types-contrib.xml,
  OSGI-INF/booktitle-service-contrib.xml,
  OSGI-INF/booktitle-contrib.xml,
  OSGI-INF/restpack-contrib.xml,
+ OSGI-INF/theme-contrib.xml,
  OSGI-INF/gadget-contrib.xml
+

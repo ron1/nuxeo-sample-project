@@ -1,0 +1,24 @@
+/*
+Sample header styles.
+=Header -> define links colors, backgrounds, logo position, alignments
+*/
+
+/* =Header */
+.sampleHeader {
+  background-color: "header (__FLAVOR__ background)";
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.18);
+  height: 3em;
+  line-height: initial;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1041 }
+
+.sampleHeader .content {
+  float: right;
+  font-size: 12px;
+  font-family: Arial;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100% }
+

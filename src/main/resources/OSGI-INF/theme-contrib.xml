@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+
+<component name="org.nuxeo.project.sample.theme.contrib">
+
+    <require>org.nuxeo.theme.nuxeo.webapp</require>
+    <require>org.nuxeo.ecm.admin.center.theme</require>
+    <require>org.nuxeo.search.ui.theme</require>
+    <require>org.nuxeo.ecm.user.center.theme</require>
+
+    <extension target="org.nuxeo.ecm.platform.WebResources" point="resources">
+
+        <!-- Sass styles -->
+        <resource name="nuxeo_header.scss" type="css">
+            <path>themes/sass/nuxeo_header.scss</path>
+            <processors>
+                <processor>sassCss</processor>
+            </processors>
+        </resource>
+        <resource name="nuxeo_footer.scss" type="css">
+            <path>themes/sass/nuxeo_footer.scss</path>
+            <processors>
+                <processor>sassCss</processor>
+            </processors>
+        </resource>
+        <resource name="nuxeo_body.scss" type="css">
+            <path>themes/sass/nuxeo_body.scss</path>
+            <processors>
+                <processor>sassCss</processor>
+            </processors>
+        </resource>
+        <resource name="sample_header.scss" type="css">
+            <path>themes/sass/sample_header.scss</path>
+            <processors>
+                <processor>sassCss</processor>
+            </processors>
+        </resource>
+        <resource name="sample_footer.scss" type="css">
+            <path>themes/sass/sample_footer.scss</path>
+            <processors>
+                <processor>sassCss</processor>
+            </processors>
+        </resource>
+        <!-- end of resources declaration -->
+
+    </extension>
+
+    <extension target="org.nuxeo.ecm.platform.WebResources" point="bundles">
+
+        <!-- Sass styles  -->
+        <bundle name="sample_sassCss">
+            <resources>
+                <resource>nuxeo_header.scss</resource>
+                <resource>nuxeo_footer.scss</resource>
+                <resource>nuxeo_body.scss</resource>
+                <resource>sample_header.scss</resource>
+                <resource>sample_footer.scss</resource>
+            </resources>
+        </bundle>
+
+    </extension>
+
+    <!-- Register mapping between theme pages and resources -->
+    <extension target="org.nuxeo.theme.styling.service" point="pages">
+
+        <themePage name="galaxy/default" charset="utf-8">
+            <defaultFlavor>default</defaultFlavor>
+            <flavors>
+                <flavor>default</flavor>
+                <flavor>rainbow</flavor>
+            </flavors>
+            <resources>
+                <bundle>nuxeo_includes</bundle>
+                <bundle>nuxeo_base</bundle>
+                <bundle>nuxeo_sassCss</bundle>
+                <bundle>nuxeo_dm</bundle>
+                <bundle>sample_sassCss</bundle>
+            </resources>
+        </themePage>
+
+        <themePage name="admin/default" charset="utf-8">
+            <defaultFlavor>default</defaultFlavor>
+            <flavors>
+                <flavor>default</flavor>
+                <flavor>rainbow</flavor>
+            </flavors>
+            <resources>
+                <bundle>nuxeo_includes</bundle>
+                <bundle>nuxeo_base</bundle>
+                <bundle>nuxeo_sassCss</bundle>
+                <resource>nuxeo_admincenter_specific.scss</resource>
+                <bundle>sample_sassCss</bundle>
+            </resources>
+        </themePage>
+
+        <themePage name="search/default">
+            <defaultFlavor>default</defaultFlavor>
+            <resources>
+                <bundle>nuxeo_includes</bundle>
+                <bundle>nuxeo_base</bundle>
+                <bundle>nuxeo_sassCss</bundle>
+                <resource>nuxeo_search_specific.scss</resource>
+                <bundle>sample_sassCss</bundle>
+            </resources>
+        </themePage>
+
+        <themePage name="userCenter/default" charset="utf-8">
+            <defaultFlavor>default</defaultFlavor>
+            <flavors>
+                <flavor>default</flavor>
+                <flavor>rainbow</flavor>
+            </flavors>
+            <resources>
+                <bundle>nuxeo_includes</bundle>
+                <bundle>nuxeo_base</bundle>
+                <bundle>nuxeo_sassCss</bundle>
+                <resource>nuxeo_usercenter_specific.scss</resource>
+                <bundle>sample_sassCss</bundle>
+            </resources>
+        </themePage>
+
+    </extension>
+
+    <!-- Register flavors (collections of presets) -->
+    <extension target="org.nuxeo.theme.styling.service" point="flavors">
+
+        <flavor name="default">
+            <label>label.theme.flavor.nuxeo.default</label>
+            <logo>
+                <path>/img/purple.png</path>
+                <previewPath>/img/purple.png</previewPath>
+                <width>113</width>
+                <height>20</height>
+                <title>Sample</title>
+            </logo>
+        </flavor>
+
+        <flavor name="rainbow">
+            <label>label.theme.flavor.nuxeo.rainbow</label>
+            <logo>
+                <path>/img/purple.png</path>
+                <previewPath>/img/purple.png</previewPath>
+                <width>113</width>
+                <height>20</height>
+                <title>Sample</title>
+            </logo>
+        </flavor>
+
+    </extension>
+
+</component>

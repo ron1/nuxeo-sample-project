@@ -1,0 +1,32 @@
+/*
+Styles for containers of all products
+author: lkemen@nuxeo.com
+*/
+
+/* Container of the main part without header and footer */
+.nxMainContainer {
+  background-color: "neutral.lighter (__FLAVOR__ background)";
+  font-size: .8em;
+  min-height: 100%;
+  position: relative;
+  width: 100%; }
+
+.sampleHeader + .nxHeader + .nxMainContainer {
+  margin-top: 6.7em; }
+
+.nxMainContainer .column,
+.nxMainContainer .verticalTabsColumn,
+.nxMainContainer .nxSearchForm {
+  background: none "color.major.stronger (__FLAVOR__ background)";
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  bottom: 0;
+  font-size: .85em;
+  width: 19%;
+  padding: 9em 1em;
+  position: fixed;
+  overflow-y: auto;
+  top: 0; }
+
+.nxMainContainer .column > div:last-child,
+.nxMainContainer .nxSearchForm > div:last-child {
+  margin-bottom: 6em; }

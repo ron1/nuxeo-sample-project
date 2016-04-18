@@ -1,0 +1,21 @@
+/*
+Styles for all the foldable boxes.
+=Footer -> Sample footer
+*/
+
+/* =Footer */
+.sampleFooter {
+  background: none "footer (__FLAVOR__ background)";
+  font-size: .8em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1041 }
+
+.sampleFooter .content {
+  float: right;
+  font-size: 12px;
+  font-family: Arial;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100% }
